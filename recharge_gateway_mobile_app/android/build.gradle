@@ -1,3 +1,23 @@
+buildscript {
+    ext {
+        // Define your Kotlin version here
+        kotlin_version = '1.8.0'  // Update to the latest stable version if needed
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://storage.googleapis.com/download.flutter.io' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.3.0'  // Add the correct Gradle plugin version
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        //classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.0'
+        // classpath "com.google.gms:google-services:4.3.15"
+        // classpath "dev.flutter:flutter_gradle_plugin:1.0.0"
+    }
+}
+
 allprojects {
     repositories {
         google()
